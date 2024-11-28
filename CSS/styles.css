@@ -1,0 +1,369 @@
+/* Estilos básicos de la barra de navegación */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    background-color: #f6f64c;
+    padding: 0 20px;
+
+}
+
+.navbar .logo img {
+    height: 50px;
+    /* Ajusta el tamaño del logo */
+    max-height: 100%;
+    /* Evita que se desborde */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    position: relative;
+}
+
+.navbar ul li a {
+    display: block;
+    padding: 14px 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    transition: background-color .5s ease, color .5s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #75747440;
+}
+
+.navbar ul li .dropdown-menu {
+    display: none;
+    /* Ocultar los submenús por defecto */
+    position: absolute;
+    top: 100%;
+    /* Asegura que el submenú se despliegue debajo del elemento */
+    left: 0;
+    background-color: #FFFF77;
+    min-width: 180px;
+    padding: 0;
+    text-align: left;
+    z-index: 1;
+}
+
+.navbar ul li:hover .dropdown-menu {
+    display: block;
+    /* Mostrar el submenú */
+}
+
+.navbar ul li .dropdown-menu li {
+    display: block;
+}
+
+.navbar ul li .dropdown-menu li a {
+    padding: 10px 16px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.navbar ul li .dropdown-menu li a:hover {
+    background-color: #75747440;
+}
+
+/* Slider */
+/* Slider */
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 90vh;
+    background: linear-gradient(45deg, #333, #111);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.slider .frametrack {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    transition: left 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.slider .frametrack .slide {
+    position: relative;
+    width: 100vw;
+    height: 90vh;
+}
+
+.slider .frametrack .slide img {
+    display: block;
+    width: 100vw;
+    height: 90vh;
+    object-fit: cover;
+    object-position: center center;
+    filter: brightness(90%);
+    transition: transform 0.5s ease-in-out, filter 0.3s ease;
+}
+
+.slider .frametrack .slide img:hover {
+    filter: brightness(100%);
+    transform: scale(1.05);
+}
+
+.slider .frametrack .slide div {
+    position: absolute;
+    padding: 2rem;
+    max-width: 400px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(240, 240, 240, 0.9));
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.slider .frametrack .slide div.q2 {
+    top: 20%;
+    left: 70%;
+    transform: translate(-50%, 50%);
+    opacity: 0.9;
+}
+
+.slider .frametrack .slide div h2 {
+    font-size: 2rem;
+    color: #111;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.slider .frametrack .slide div a.btn {
+    display: inline-block;
+    background: linear-gradient(45deg, #ff7a18, #ffa41b);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.slider .frametrack .slide div a.btn:hover {
+    background: linear-gradient(45deg, #ff5200, #ffa41b);
+    transform: scale(1.1);
+}
+
+/* Botones de navegación */
+.slider .navigation-btn {
+    position: absolute;
+    top: 50%;
+    z-index: 1000;
+    padding: 1.2rem;
+    font-size: 2rem;
+    color: white;
+    background: linear-gradient(135deg, #333, #000);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.slider .navigation-btn:hover {
+    background: linear-gradient(135deg, #555, #222);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.slider .navigation-btn.navigate-right {
+    left: auto;
+    right: 20px;
+}
+
+.slider .navigation-btn.navigate-left {
+    left: 20px;
+}
+
+/* Indicadores de navegación */
+.navigation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.navigation-index {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 2px solid #444;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navigation-index.active {
+    background-color: #ffa41b;
+    transform: scale(1.2);
+}
+
+.navigation-index:hover {
+    background-color: #ff7a18;
+    transform: scale(1.1);
+}
+
+
+/* Sección de áreas clave */
+.areas-clave {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espacio entre las tarjetas */
+    padding: 40px;
+    background-color: #b4c0cc; /* Color de fondo claro */
+    flex-wrap: wrap;
+}
+
+.area {
+    text-align: center;
+    background-color: #fffc48;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Bordes redondeados */
+    width: 240px;
+    height: 280px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para mejor apariencia */
+    transition: transform 0.3s ease-in-out;
+}
+
+.area:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+
+.area img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px; /* Bordes redondeados para las imágenes */
+    margin-bottom: 15px;
+}
+
+.area h2 {
+    font-size: 1.5em;
+    margin: 0;
+    color: #333;
+}
+
+
+/* Panel de precios */
+
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ddd;
+    padding: 2%;
+    background-color: #333;
+    margin: 0; /* Elimina márgenes adicionales */
+    border: none; /* Asegúrate de que no haya bordes */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
+}
+
+
+.socios-section {
+    text-align: right;
+    padding: 60%;
+    background-color: #0080ff;
+}
+
+.socios {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    background-color: #b4c0cc;
+    flex-wrap: wrap;
+    /* Permite que las tarjetas se muevan en múltiples filas */
+}
+
+.socio {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    width: 280px;
+    /* Ajusta el ancho */
+    height: 270px;
+    /* Ajusta la altura para hacerla más cuadrada */
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    /* Organiza los elementos verticalmente */
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    /* Bordes redondeados para mejorar el diseño */
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra para más atractivo */
+}
+
+.socio img {
+    width: auto;
+    height: auto;
+    aspect-ratio: 1/1;
+    /* Fuerza que la imagen sea cuadrada */
+    object-fit: cover;
+    /* Asegura que la imagen ocupe bien el espacio */
+    margin-bottom: 15px;
+    border-radius: 8px;
+    /* Opcional: redondea los bordes de la imagen */
+}
+
+.socio h2 {
+    font-size: 1.2em;
+    margin: 6px;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.socio p {
+    color: #777;
+    font-size: 1em;
+    margin: 10px 0 0;
+}
+
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    font-size: 0.9em;
+}
+
+footer div a{
+    color: white;
+}

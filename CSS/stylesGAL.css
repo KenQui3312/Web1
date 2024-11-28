@@ -1,0 +1,134 @@
+       /* Estilos básicos de la barra de navegación */
+       body {
+        margin: 0;
+        padding: 0;
+    }
+
+    *{
+        font-family: Arial, sans-serif;
+    }
+
+    header{
+        width: 100%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        object-fit: cover;
+        justify-content: flex-start;
+        background-color: #f6f64c;
+    }
+    .navbar {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: bold;
+        background-color: #f6f64c;
+        padding: 0 20px;
+    }
+
+    .navbar .logo img {
+        height: 50px;
+        /* Ajusta el tamaño del logo */
+        max-height: 100%;
+        /* Evita que se desborde */
+    }
+
+    .navbar ul {
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .navbar ul li {
+        position: relative;
+        border: .1px solid rgb(0, 0, 0);
+        width: 100vw;
+    }
+
+    .navbar ul li a {
+        display: block;
+        padding: 14px 20px;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 13px;
+    }
+
+    .navbar ul li a:hover {
+        background-color: #75747440;
+        transition: background-color .5s ease, color .5s ease;
+
+    }
+
+   
+
+
+
+  
+
+
+    /* Pie de página */
+    footer {
+        text-align: center;
+        padding: 15px;
+        background-color: #333;
+        color: #fff;
+        font-size: 0.9em;
+    }
+
+    footer div a{
+        color: white;
+    }    
+
+
+
+
+@media(min-width:720px){
+    header{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media(min-width:1024px){
+
+}
+
+@media(min-width:1300px){
+    .navbar ul li .dropdown-menu {
+        display: none;
+        /* Ocultar los submenús por defecto */
+        position: absolute;
+        top: 100%;
+        /* Asegura que el submenú se despliegue debajo del elemento */
+        left: 0;
+        background-color: #FFFF77;
+        min-width: 180px;
+        padding: 0;
+        text-align: left;
+        z-index: 1;
+    }
+
+    .navbar ul li:hover .dropdown-menu {
+        display: block;
+        /* Mostrar el submenú */
+    }
+
+    .navbar ul li .dropdown-menu li {
+        display: block;
+    }
+
+    .navbar ul li .dropdown-menu li a {
+        padding: 10px 16px;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+    }
+
+    .navbar ul li .dropdown-menu li a:hover {
+        background-color: #75747440;
+    }
+}
