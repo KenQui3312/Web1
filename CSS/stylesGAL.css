@@ -1,74 +1,12 @@
        /* Estilos básicos de la barra de navegación */
-body {
-    margin: 0;
-    padding: 0;
-    background: rgb(224, 224, 224);
-    color: rgb(63, 62, 62);
 
-}
-
-*{
-    font-family: Arial, sans-serif;
-}
-
-header{
+body{
     width: 100%;
-    height: auto;
-    position: relative;
-    overflow: hidden;
-    object-fit: cover;
-    justify-content: flex-start;
-    background-color: #f6f64c;    
-    color: rgb(63, 62, 62);
-}
-.navbar {
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    font-weight: bold;
-    background-color: #f6f64c;
-    padding: 0 20px;
 }
 
-.navbar .logo img {
-    height: 50px;
-        /* Ajusta el tamaño del logo */
-    max-height: 100%;
-        /* Evita que se desborde */
-}
-
-.navbar ul {
-    display: flex;
-    list-style: none;
-    flex-direction: column;
-    margin: 0px;
-    padding: 0px;
-}
-
-.navbar ul li {
-    position: relative;
-    border-top: .1px solid rgb(0, 0, 0);
-    width: 100vw;
-}
-
-.navbar ul li a {
-    display: block;
-    padding: 14px 20px;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 13px;
-}
-
-.navbar ul li a:hover {
-    background-color: #75747440;
-    transition: background-color .5s ease, color .5s ease;
-
-}
 
 .container{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -78,26 +16,25 @@ header{
 }
 
 .container .contenido{
-    position: relative;
+    text-align: justify;
     border: 1px solid rgb(158, 157, 157);
     box-shadow: 10px 10px 10px rgb(112, 112, 112);
     background-color: white;
-    max-width: 350px;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    width: 90%;
+    margin: 10px;
     border-radius: 5px;
 }
 .container .contenido img{
     width: 100%;
-    height: 200px;
+    height: 20%;
     object-position: center center;
     object-fit: cover;
 }
 
-
-   
-
-
+.container .contenido .infoProyectos{
+    padding: 20px 15px;
+    text-align: justify;
+}
 
   
 
@@ -115,52 +52,34 @@ footer div a{
     color: white;
 }    
 
-
-
-
-
 @media(min-width:720px){
-    header{
-        flex-direction: row;
-        justify-content: space-between;
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;    
     }
-}
+    .container .contenido{
+        width: 90%;
+        height: 90%;
+    }
 
-@media(min-width:1024px){
-
+    .container .container .infoProyectos{
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media(min-width:1300px){
-    .navbar ul li .dropdown-menu {
-        display: none;
-        /* Ocultar los submenús por defecto */
-        position: absolute;
-        top: 100%;
-        /* Asegura que el submenú se despliegue debajo del elemento */
-        left: 0;
-        background-color: #FFFF77;
-        min-width: 180px;
-        padding: 0;
-        text-align: left;
-        z-index: 1;
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: row;
     }
 
-    .navbar ul li:hover .dropdown-menu {
-        display: block;
-        /* Mostrar el submenú */
-    }
-
-    .navbar ul li .dropdown-menu li {
-        display: block;
-    }
-
-    .navbar ul li .dropdown-menu li a {
-        padding: 10px 16px;
-        color: rgb(0, 0, 0);
-        text-decoration: none;
-    }
-
-    .navbar ul li .dropdown-menu li a:hover {
-        background-color: #75747440;
+    .container .contenido{
+        margin: 1rem;
     }
 }
+

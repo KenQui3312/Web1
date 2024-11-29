@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barra de Navegación y Slider</title>
+    <link rel="stylesheet" href="CSS/styles.css">
     <link rel="stylesheet" href="CSS/stylesGAL.css">
 </head>
 
@@ -15,6 +16,7 @@
             <a href="index.html" class="logo">
                 <img src="MEDIA/LOGO-FRONT_Mesa-de-trabajo-1_Mesa-de-trabajo-1.png" alt="Logo">
             </a>
+            <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
             <ul>
                 <li><a href="index.html">INICIO</a></li>
                 <li class="dropdown">
@@ -45,22 +47,22 @@
     <main>
         <section class="container">
             <div class="contenido">
-                <h2 class="titulo">Programa de Mitigación y Adaptación al Cambio Climático en Centro América</h2>
+                <h2 class="titulo">Programa de Mitigación y Adaptación al Cambio Climático en Centroamérica</h2>
                 <picture>
                     <source srcset="MEDIA/IMG-20191013-WA0008-1.jpg" media="(min-width:1024px)" />
                     <source srcset="MEDIA/IMG-20191013-WA0008-1.jpg" media="(min-width:720px)" />
                     <img src="MEDIA/IMG-20191013-WA0008-1.jpg" alt="Slide 1" />
                 </picture> 
-                <p class="infoProyectos">A nivel de Honduras, este Programa plantea el desarrollo y sistematización/validación de una experiencia piloto en mitigación y adaptación al CC, en contextos campesinos y población indígena, localizada en el corredor seco de Honduras, que permita obtener lecciones aprendidas, para su réplica eventual en otros territorios del país.</p>  
+                <p class="infoProyectos">A nivel de Honduras, este Programa plantea el desarrollo y sistematización de una experiencia piloto en mitigación y adaptación al CC en contextos campesinos y población indígena, localizada en el corredor seco de Honduras, que permita obtener lecciones para réplica eventual..</p>  
             </div>
             <div class="contenido">
-                <h2 class="titulo">Fortalecimiento de las Capacidades e Incidencia en Soberanía Alimentaria</h2>
+                <h2 class="titulo">Fortalecimiento de Capacidades e Incidencia en Soberanía Alimentaria</h2>
                 <picture>
                     <source srcset="MEDIA/REUNIONES.jpg" media="(min-width:1024px)" />
                     <source srcset="MEDIA/REUNIONES.jpg" media="(min-width:720px)" />
                     <img src="MEDIA/REUNIONES.jpg" alt="Slide 1" />
                 </picture>
-                <p class="infoProyectos">El Proyecto está orientado a desarrollar y/o fortalecer capacidades de las mujeres de comunidades rurales. Particularmente enfocado, en propiciar condiciones para fortalecer la institucionalidad, empoderamiento y autonomía de las mujeres, como grupo meta priorizado. Significa el desarrollo de procesos de organización y articulación de grupos locales/que se constituyen en red sectorial y se articulan a la red municipal, para fines de vincularse organizativamente y a nivel de agenda, con la Red Regional de Mujeres.</p>
+                <p class="infoProyectos">El Proyecto está orientado a desarrollar y fortalecer capacidades de mujeres en comunidades rurales, propiciando condiciones para fortalecer la institucionalidad, empoderamiento y autonomía de las mujeres, como grupo priorizado, desarrollando procesos de organización y articulación.</p>
             </div>
             <div class="contenido">
                 <h2 class="titulo">Juventudes en Redes para la Prevención de las Violencias Sociales JUPREV</h2>
@@ -69,10 +71,29 @@
                     <source srcset="MEDIA/Foto-Proyecto-JUPREV.jpg" media="(min-width:720px)" />
                     <img src="MEDIA/Foto-Proyecto-JUPREV.jpg" alt="Slide 1" />
                 </picture>
-                <p class="infoProyectos">El CDH, a través del Proyecto JUPREV, fortalecerá y expandirá las redes de las organizaciones juveniles para fortalecer el liderazgo y promover la participación cívica en la prevención de la violencia social y la promoción de los derechos fundamentales de la juventud. Como parte de la iniciativa, se incluyen el desarrollo de procesos de capacitación en liderazgo juvenil y organizativo, el monitoreo de políticas e inversiones públicas, la promoción de agendas juveniles de las redes, y el establecimiento de centros locales administrados por jóvenes que proporcionen oportunidades recreativas, artísticas y económicas.</p>
+                <p class="infoProyectos">El CDH, a través de JUPREV, fortalecerá redes juveniles para fomentar liderazgo y participación cívica en la prevención de la violencia social, incluyendo procesos de capacitación, monitoreo de políticas públicas y creación de centros juveniles con oportunidades recreativas.</p>
+            </div>
+            <div class="contenido">
+                <h2 class="titulo">Comunidades Construyendo Resiliencia Social y Ambiental Sostenible</h2>
+                <picture>
+                    <source srcset="MEDIA/comunidadesResiliencia.jpg" media="(min-width:1024px)" />
+                    <source srcset="MEDIA/comunidadesResiliencia.jpg" media="(min-width:720px)" />
+                    <img src="MEDIA/comunidadesResiliencia.jpg" alt="Slide 1" />
+                </picture>
+                <p class="infoProyectos">El proyecto 'Comunidades Construyendo Resiliencia' articula estrategias de adaptación al cambio climático en el sur de Honduras, promoviendo buenas prácticas, fortaleciendo capacidades institucionales y generando aprendizajes. Vincula agendas locales con redes regionales.</p>
+            </div>
+            <div class="contenido">
+                <h2 class="titulo">Honduras en Acción Contra la Corrupción y por la Transparencia Social</h2>
+                <picture>
+                    <source srcset="MEDIA/accionCorrupcion.jpg" media="(min-width:1024px)" />
+                    <source srcset="MEDIA/accionCorrupcion.jpg" media="(min-width:720px)" />
+                    <img src="MEDIA/accionCorrupcion.jpg" alt="Slide 1" />
+                </picture>
+                <p class="infoProyectos">El proyecto 'Honduras en Acción contra la Corrupción' aborda la corrupción en un contexto marcado por crimen organizado, violencia e inseguridad, buscando fortalecer el Estado de derecho, combatir redes clientelares y promover la pluralidad e independencia de los medios.</p>
             </div>
         </section>
     </main>
+    <script src="js/cel.js"></script>
 </body>
 
 <!--pie de pagina-->
